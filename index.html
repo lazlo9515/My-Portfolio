@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poon Kah Hoe | Game Developer & Programmer</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #e2e8f0;
+            --text-muted: #94a3b8;
+            --accent-color: #38bdf8;
+            --accent-hover: #0ea5e9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header / Hero Section */
+        header {
+            text-align: center;
+            padding: 60px 0 40px 0;
+            border-bottom: 1px solid #334155;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .profile-desc {
+            max-width: 700px;
+            margin: 0 auto 25px auto;
+            color: var(--text-muted);
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            font-weight: bold;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            color: var(--bg-color);
+        }
+
+        /* Main Content Layout */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: #fff;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 10px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Sidebar Elements */
+        .skills-list, .lang-list {
+            list-style: none;
+        }
+
+        .skills-list li {
+            background: var(--card-bg);
+            padding: 8px 12px;
+            margin-bottom: 8px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            border-left: 3px solid #475569;
+        }
+
+        .sidebar-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #334155;
+        }
+
+        .sidebar-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        /* Projects & Awards Showcase */
+        .project-card, .award-card {
+            background: var(--card-bg);
+            padding: 24px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #334155;
+            transition: transform 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-2px);
+            border-color: #475569;
+        }
+
+        .project-header, .award-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .project-title, .award-title {
+            font-size: 1.2rem;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .project-tech {
+            font-size: 0.8rem;
+            background: #0f172a;
+            color: var(--accent-color);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: 600;
+            border: 1px solid #1e293b;
+        }
+
+        .project-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .award-badge {
+            font-size: 0.8rem;
+            font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+        .gold { background-color: #eab308; color: #000; }
+        .silver { background-color: #94a3b8; color: #000; }
+        .blue { background-color: #3b82f6; color: #fff; }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid #334155;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>POON KAH HOE</h1>
+            <div class="subtitle">Game Developer & Programmer</div>
+            <p class="profile-desc">
+                Versatile and detail-oriented Game Technology student with a strong foundation in gameplay programming, multiplayer networking, and interactive simulations. Proficient across multiple engines with experience implementing complex mechanics from competitive multiplayer architectures to VR industrial training systems.
+            </p>
+            <div class="contact-links">
+                <a href="https://lazlo9515.itch.io/" target="_blank" class="btn btn-primary">🎮 Itch.io Portfolio</a>
+                <a href="https://linkedin.com/in/kah-hoe-poon" target="_blank" class="btn">🔗 LinkedIn</a>
+                <a href="mailto:kahhoe210@gmail.com" class="btn">📧 Email Me</a>
+                <span class="btn">📱 017-7366774</span>
+            </div>
+        </header>
+
+        <div class="main-layout">
+            <aside>
+                <section>
+                    <h2>Education</h2>
+                    <div class="sidebar-card">
+                        <h3>UTeM - FTMK</h3>
+                        <p style="color: var(--accent-color); font-size: 0.9rem;">Bachelor of IT (Game Tech)</p>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">Expected: Mar/Apr 2027</p>
+                        <p style="margin-top: 5px; font-weight: bold;">CGPA: 3.40</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Technical Skills</h2>
+                    <ul class="skills-list">
+                        <li>Unity & C#</li>
+                        <li>Unreal Engine & C++ / Blueprints</li>
+                        <li>Photon PUN 2 (Multiplayer)</li>
+                        <li>Godot / GDevelop / Raylib</li>
+                        <li>Python / Java / JS</li>
+                        <li>MySQL / SQL (XAMPP)</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Languages & Soft Skills</h2>
+                    <div class="sidebar-card" style="font-size: 0.9rem;">
+                        <p><strong>Languages:</strong> English, Malay, Mandarin, Korean</p>
+                        <p style="margin-top: 10px; color: var(--text-muted);">Teamwork, Clear Communication, Analytical Problem-Solving, Game Design & Storytelling</p>
+                    </div>
+                </section>
+            </aside>
+
+            <main>
+                <section>
+                    <h2>Key Projects</h2>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-title">THE FINAL CHAMBER (Final Year Project)</div>
+                            <span class="project-tech">Unity | Photon PUN 2 | C#</span>
+                        </div>
+                        <p class="project-desc">Developed a 4-player cooperative educational escape game, engineering robust real-time networking and synchronized puzzle mechanics.</p>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-title">Football Madness</div>
+                            <span class="project-tech">Unity | Photon PUN 2 | C#</span>
+                        </div>
+                        <p class="project-desc">Engineered a competitive 2v2 multiplayer football game with reliable matchmaking, client-side prediction, and server synchronization.</p>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-title">IPETRO: Zero Leak Challenge</div>
+                            <span class="project-tech">Unity | VR | C#</span>
+                        </div>
+                        <p class="project-desc">Served as Lead Programmer for an immersive industrial AR/VR training simulation, creating risk-free interactive mechanics for flange assembly and leak detection.</p>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-title">Local Multiplayer Car Racing</div>
+                            <span class="project-tech">Unreal Engine | C++ | Blueprints</span>
+                        </div>
+                        <p class="project-desc">Engineered a split-screen racing simulation focusing on precise vehicle physics and dynamic camera management.</p>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-title">Pro Snooker Physics Simulation</div>
+                            <span class="project-tech">Processing (Java)</span>
+                        </div>
+                        <p class="project-desc">Programmed a custom 2D physics engine from scratch, handling complex rigid body dynamics, collision detection, and environmental friction.</p>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-title">Airport Kiosk Ticket Booking System</div>
+                            <span class="project-tech">C++ | MySQL</span>
+                        </div>
+                        <p class="project-desc">Developed a robust terminal-based booking system with user authentication, ticket management, and an admin dashboard for real-time sales tracking.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Achievements & Awards</h2>
+
+                    <div class="award-card">
+                        <div class="award-header">
+                            <div class="award-title">Gold Award — Workshop II Innovation Competition</div>
+                            <span class="award-badge gold">GOLD</span>
+                        </div>
+                        <p class="project-desc">Conferred by Ipetro Services Sdn Bhd & UTeM for excellence in the "IPETRO: Zero Leak Challenge" VR project.</p>
+                    </div>
+
+                    <div class="award-card">
+                        <div class="award-header">
+                            <div class="award-title">Silver Award — Play Next Game Jam (DTC, UTeM)</div>
+                            <span class="award-badge silver">SILVER</span>
+                        </div>
+                        <p class="project-desc">Awarded for the innovation and design of the 2v2 competitive multiplayer game "Football Madness".</p>
+                    </div>
+
+                    <div class="award-card">
+                        <div class="award-header">
+                            <div class="award-title">Dean's List Award</div>
+                            <span class="award-badge blue">ACADEMIC</span>
+                        </div>
+                        <p class="project-desc">Universiti Teknikal Malaysia Melaka (UTeM) | Year 3, Semester 1 (CGPA: 3.40).</p>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <footer>
+            <p>© 2026 Poon Kah Hoe. Located in Johor Bahru, Johor, Malaysia.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
